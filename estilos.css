@@ -1,0 +1,608 @@
+/* estilos.css - Diseño exacto como las imágenes de referencia */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+  min-height: 100vh;
+}
+
+/* MODAL TÉRMINOS */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-contenido {
+  background: #222;
+  border-radius: 20px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 2px solid #ff6b00;
+  box-shadow: 0 0 30px rgba(255, 107, 0, 0.5);
+}
+
+.modal-header {
+  background: #ff6b00;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.modal-header h2 {
+  color: white;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.modal-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 30px;
+  color: #ddd;
+}
+
+.terminos-lista {
+  list-style: decimal;
+  padding-left: 20px;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.terminos-lista li {
+  margin-bottom: 15px;
+}
+
+.legal {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #ff6b00;
+  text-align: center;
+}
+
+.modal-footer {
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #444;
+}
+
+.btn-aceptar {
+  background: #ff6b00;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-aceptar:hover {
+  background: #ff8533;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff6b00;
+}
+
+/* HERO SECTION (como imagen 3) */
+.hero {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.progreso-superior {
+  margin-bottom: 30px;
+}
+
+.progreso-texto {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ff6b00;
+  margin-bottom: 10px;
+}
+
+.porcentaje {
+  font-size: 36px;
+  color: white;
+}
+
+.barra-progreso-superior {
+  width: 100%;
+  height: 30px;
+  background: #333;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid #ff6b00;
+}
+
+.barra-llenado {
+  height: 100%;
+  background: linear-gradient(90deg, #ff6b00, #ffaa00);
+  border-radius: 15px;
+  transition: width 0.5s;
+}
+
+.titulo-principal {
+  font-size: 48px;
+  font-weight: 900;
+  text-align: center;
+  margin: 30px 0;
+  text-transform: uppercase;
+}
+
+.destacado {
+  color: #ff6b00;
+  text-shadow: 0 0 10px #ff6b00;
+  display: block;
+  font-size: 64px;
+}
+
+.precio-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.precio {
+  background: #ff6b00;
+  padding: 15px 40px;
+  font-size: 32px;
+  font-weight: 800;
+  border-radius: 50px;
+  display: inline-block;
+  box-shadow: 0 0 20px #ff6b00;
+}
+
+.info-sorteo {
+  text-align: center;
+  margin: 30px 0;
+  line-height: 2;
+}
+
+.hora {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffaa00;
+}
+
+.top-compra {
+  font-size: 20px;
+  color: #fff;
+}
+
+.fecha {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ff6b00;
+  margin: 10px 0;
+}
+
+.fecha-detalle {
+  font-size: 18px;
+  color: #888;
+}
+
+.botones-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.btn-comprar {
+  background: linear-gradient(45deg, #ff6b00, #ffaa00);
+  color: white;
+  border: none;
+  padding: 20px 60px;
+  font-size: 28px;
+  font-weight: 800;
+  border-radius: 60px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: 0.3s;
+  box-shadow: 0 0 30px #ff6b00;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.btn-comprar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px #ffaa00;
+}
+
+.disponible {
+  text-align: center;
+  font-size: 24px;
+  margin: 30px 0;
+}
+
+.porcentaje-grande {
+  font-size: 48px;
+  font-weight: 900;
+  color: #ff6b00;
+  text-shadow: 0 0 10px #ff6b00;
+  margin: 0 10px;
+}
+
+/* FORMULARIO SECTION (como imagen 1) */
+.formulario-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #222;
+  border-radius: 30px;
+  border: 2px solid #ff6b00;
+  box-shadow: 0 0 30px rgba(255, 107, 0, 0.3);
+}
+
+.formulario-section.hidden {
+  display: none;
+}
+
+.cedula-container {
+  margin-bottom: 30px;
+}
+
+.cedula-label {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ffaa00;
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 30px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #ff6b00;
+}
+
+.checkbox-item label {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.minimo-container {
+  background: #333;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  border-left: 5px solid #ff6b00;
+}
+
+.minimo-label {
+  font-size: 18px;
+  color: #fff;
+}
+
+.minimo-valor {
+  color: #ff6b00;
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.cantidad-selector {
+  margin-bottom: 30px;
+}
+
+.cantidad-selector label {
+  display: block;
+  font-size: 16px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.selector-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-cantidad {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  background: #ff6b00;
+  border: none;
+  color: white;
+  font-size: 30px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-cantidad:hover {
+  background: #ffaa00;
+  transform: scale(1.1);
+}
+
+.cantidad-input {
+  flex: 1;
+  height: 50px;
+  background: #333;
+  border: 2px solid #ff6b00;
+  border-radius: 15px;
+  color: white;
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.total-container {
+  background: linear-gradient(45deg, #ff6b00, #ffaa00);
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.total-label {
+  font-size: 16px;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 5px;
+}
+
+.total-valor {
+  font-size: 36px;
+  font-weight: 900;
+  color: white;
+}
+
+.pago-container {
+  background: #333;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.pago-titulo {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffaa00;
+  margin-bottom: 15px;
+}
+
+.pago-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: #444;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.pago-item.destacado {
+  background: #ff6b00;
+  font-weight: 800;
+}
+
+.pago-datos {
+  background: #222;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #ff6b00;
+  margin-top: 15px;
+  font-family: monospace;
+  font-size: 16px;
+  word-break: break-all;
+}
+
+.formulario-datos {
+  margin-top: 30px;
+}
+
+.formulario-datos h3 {
+  color: #ffaa00;
+  margin-bottom: 20px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.campo {
+  margin-bottom: 20px;
+}
+
+.campo label {
+  display: block;
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 5px;
+}
+
+.campo-input {
+  width: 100%;
+  padding: 15px;
+  background: #333;
+  border: 2px solid #444;
+  border-radius: 15px;
+  color: white;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.campo-input:focus {
+  outline: none;
+  border-color: #ff6b00;
+  box-shadow: 0 0 10px #ff6b00;
+}
+
+.archivo-input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.archivo-input-container input[type="file"] {
+  display: none;
+}
+
+.btn-archivo {
+  background: #ff6b00;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-archivo:hover {
+  background: #ffaa00;
+}
+
+.archivo-nombre {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.terminos-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  padding: 15px;
+  background: #333;
+  border-radius: 15px;
+}
+
+.terminos-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #ff6b00;
+}
+
+.link-terminos {
+  background: none;
+  border: none;
+  color: #ff6b00;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-enviar {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(45deg, #ff6b00, #ffaa00);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 24px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.btn-enviar:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px #ff6b00;
+}
+
+.btn-volver {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 2px solid #ff6b00;
+  border-radius: 50px;
+  color: #ff6b00;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-volver:hover {
+  background: #ff6b00;
+  color: white;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-size: 12px;
+  border-top: 1px solid #333;
+  margin-top: 40px;
+}
+
+/* ANIMACIONES */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.btn-comprar {
+  animation: pulse 2s infinite;
+}
+
+.porcentaje-grande {
+  animation: pulse 3s infinite;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .titulo-principal {
+    font-size: 32px;
+  }
+  
+  .destacado {
+    font-size: 48px;
+  }
+  
+  .btn-comprar {
+    font-size: 20px;
+    padding: 15px 30px;
+  }
+  
+  .formulario-section {
+    margin: 20px;
+    padding: 20px;
+  }
+}

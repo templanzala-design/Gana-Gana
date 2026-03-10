@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔥 RIFA 120 PUGCITO · GANA HOY 🔥</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- MODAL TÉRMINOS Y CONDICIONES (exactamente como en tu imagen 2) -->
+  <div id="modalTyC" class="modal hidden">
+    <div class="modal-contenido">
+      <div class="modal-header">
+        <h2>📜 TÉRMINOS Y CONDICIONES</h2>
+        <button id="closeModalBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <ol class="terminos-lista">
+          <li>Los números disponibles para la compra en cada uno de nuestro sorteo, se especifican en la página de detalles correspondiente a cada sorteo.</li>
+          <li>Solo podrán participar en nuestro sorteo, personas mayores de 18 años.</li>
+          <li>La compra mínima para participar se especificará en la publicación de cada sorteo. El participante podrá comprar la cantidad que desee. Los tickets serán asignados de manera aleatoria y el participante los recibirá a través del correo electrónico proporcionado al momento de realizar la compra.</li>
+          <li>Los tickets serán enviados en un lapso máximo de 24 horas debido al alto volumen de pagos por procesar. Una vez realizado el pago de los tickets, no realizamos devolución de dinero bajo ningún concepto.</li>
+          <li>El Ganador tiene un lapso de 72 horas para reclamar su premio desde el anuncio oficial. No nos hacemos responsables por daños ocasionados a los premios después de haberse entregados.</li>
+          <li>Nuestro Sorteo se realizará al tener el 100% de los tickets vendidos. En caso de fijar una fecha para un sorteo y no haber completado el 100% de la venta de los tickets, se modifica la fecha o se pospondría el sorteo hasta tener el 100% de los tickets vendidos.</li>
+          <li>En caso de realizar un sorteo sin haber vendido el 100% de los tickets y no sale ganador, se fijaría una nueva fecha para realizar nuevamente el sorteo o vuelve a jugar al tener el 100% de los tickets vendidos.</li>
+          <li>El top de compras será definido una vez vendido el 100% de los tickets. El participante podrá comprar la cantidad de tickets que desee. Nosotros no nos hacemos responsables por el dinero invertido en dicho Top de compras.</li>
+          <li>Los Ganadores aceptan aparecer en el contenido audiovisual del sorteo, mostrando su presencia en las redes sociales y entregas de los premios.</li>
+          <li>Cualquier uso de nuestro nombre, sin autorización será penalizado legalmente.</li>
+        </ol>
+        <p class="legal">* Este sitio no procesa pagos; el participante debe pagar desde su banco y subir el comprobante.</p>
+      </div>
+      <div class="modal-footer">
+        <button id="aceptarTyC" class="btn-aceptar">ACEPTO TÉRMINOS Y CONDICIONES</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main id="mainContent" class="hidden">
+
+    <!-- SECCIÓN SUPERIOR (IGUAL A TU IMAGEN 3) -->
+    <section class="hero">
+      <!-- Barra de progreso superior (QUEDAN 61%) -->
+      <div class="progreso-superior">
+        <div class="progreso-texto">QUEDAN <span class="porcentaje">80.00%</span></div>
+        <div class="barra-progreso-superior">
+          <div class="barra-llenado" style="width: 20%"></div>
+        </div>
+      </div>
+
+      <!-- Título principal -->
+      <h1 class="titulo-principal">GANATE <span class="destacado">Bera Gr 0km</span></h1>
+      
+      <!-- Precio -->
+      <div class="precio-container">
+        <span class="precio">250 Bolívares</span>
+      </div>
+
+      <!-- Info del sorteo -->
+      <div class="info-sorteo">
+        <p class="hora">1:00pm 100$ 3er lugar</p>
+        <p class="top-compra">4:00pm 100$ 2do lugar</p>
+        <p class="fecha">JUEGOS EL MARTES 24 DE MARZO</p>
+        <p class="fecha-detalle">Bera Gr 0km 24/03/26</p>
+      </div>
+
+      <!-- SOLO BOTÓN COMPRAR TICKETS (sin los otros) -->
+      <div class="botones-container">
+        <button id="comprarBtn" class="btn-comprar">
+          <i class="fas fa-ticket-alt"></i>
+          COMPRAR TICKETS
+          <i class="fas fa-chevron-down"></i>
+        </button>
+      </div>
+
+      <!-- Porcentaje disponible (repetido como en tu imagen) -->
+      <div class="disponible">
+        QUEDAN <span class="porcentaje-grande">80%</span> DISPONIBLE
+      </div>
+    </section>
+
+    <!-- SECCIÓN DEL FORMULARIO (oculta hasta hacer clic en COMPRAR) -->
+    <section id="formularioSection" class="formulario-section hidden">
+      
+      <!-- Cédula (primeros checkboxes como en tu imagen 1) -->
+      <div class="cedula-container">
+        <p class="cedula-label">Cédula</p>
+        <div class="checkbox-group">
+          <div class="checkbox-item">
+            <input type="checkbox" id="cedula1" checked>
+            <label for="cedula1">V</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="cedula2">
+            <label for="cedula2">E</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cantidad mínima permitida -->
+      <div class="minimo-container">
+        <p class="minimo-label">Cantidad mínima permitida: <span class="minimo-valor">2</span></p>
+      </div>
+
+      <!-- Selector de cantidad (personalizado) -->
+      <div class="cantidad-selector">
+        <label>Cantidad de tickets:</label>
+        <div class="selector-control">
+          <button id="decrementBtn" class="btn-cantidad">−</button>
+          <input type="number" id="cantidad" value="2" min="2" max="50" class="cantidad-input">
+          <button id="incrementBtn" class="btn-cantidad">+</button>
+        </div>
+      </div>
+
+      <!-- Total dinámico -->
+      <div class="total-container">
+        <p class="total-label">MONTO BS A TRANSFERIR</p>
+        <p class="total-valor" id="totalPagar">50.00 Bs.</p>
+      </div>
+
+      <!-- MÉTODOS DE PAGO (como en tu imagen) -->
+      <div class="pago-container">
+        <p class="pago-titulo">Métodos de Pago</p>
+        <div class="pago-item">
+          <i class="fas fa-mobile-alt"></i>
+          <span>Pago móvil</span>
+        </div>
+        <div class="pago-item destacado">
+          <i class="fas fa-mobile-alt"></i>
+          <span>Pago Movil</span>
+        </div>
+        <div class="pago-datos">
+          <p>0169 Banco R4 V21060450 04120805375</p>
+        </div>
+      </div>
+
+      <!-- FORMULARIO DE DATOS (como en tu imagen 1) -->
+      <div class="formulario-datos">
+        <h3>📝 TUS DATOS</h3>
+        
+        <div class="campo">
+          <label>Cédula</label>
+          <input type="text" placeholder="Escribe tu cédula" class="campo-input">
+        </div>
+
+        <div class="campo">
+          <label>Nombre completo</label>
+          <input type="text" placeholder="Escribe tu nombre y apellido" class="campo-input">
+        </div>
+
+        <div class="campo">
+          <label>Correo</label>
+          <input type="email" placeholder="Escribe tu correo de uso diario" class="campo-input">
+        </div>
+
+        <div class="campo">
+          <label>Teléfono/Whatsapp</label>
+          <input type="tel" placeholder="Escribe tu whatsapp" class="campo-input">
+        </div>
+
+        <!-- Subir archivo (Capture Bancario) -->
+        <div class="campo archivo">
+          <label>Capture Bancario</label>
+          <div class="archivo-input-container">
+            <input type="file" id="comprobante" accept=".jpg,.jpeg,.png,.pdf">
+            <label for="comprobante" class="btn-archivo">Seleccionar archivo</label>
+            <span class="archivo-nombre">Sin archivos seleccionados</span>
+          </div>
+        </div>
+
+        <!-- Referencia Bancaria -->
+        <div class="campo">
+          <label>Referencia Bancaria (últimos 6 dígitos)</label>
+          <input type="text" placeholder="Últimos 6 dígitos de la referencia" maxlength="6" class="campo-input">
+        </div>
+
+        <!-- Checkbox términos -->
+        <div class="terminos-checkbox">
+          <input type="checkbox" id="aceptoTerminos" required>
+          <label for="aceptoTerminos">Acepto los <button type="button" id="verTyCModal" class="link-terminos">Términos y Condiciones</button></label>
+        </div>
+
+        <!-- Botón enviar -->
+        <button type="submit" id="btnEnviar" class="btn-enviar">Comprar</button>
+
+        <!-- Botón volver (como en tu imagen) -->
+        <button id="volverBtn" class="btn-volver">Volver</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer con aviso legal -->
+  <footer class="footer">
+    <p>Este sitio no procesa pagos; el participante debe pagar desde su banco y subir el comprobante. Las rifas pueden estar reguladas; verifica requisitos legales en tu jurisdicción.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
