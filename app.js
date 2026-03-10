@@ -71,11 +71,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // ===========================================
-  // BOTÓN COMPRAR TICKETS (muestra el formulario)
-  // ===========================================
-  
-  comprarBtn.addEventListener('click', function() {
+ // ===========================================
+// BOTÓN COMPRAR TICKETS (CORREGIDO)
+// ===========================================
+if (comprarBtn) {
+    comprarBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log("Botón clickeado"); // Para ver si funciona
+        formularioSection.classList.remove('hidden');
+        
+        // Scroll suave hasta el formulario
+        setTimeout(() => {
+            formularioSection.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }, 100);
+    });
+}
     // Scroll suave hasta el formulario
     formularioSection.classList.remove('hidden');
     formularioSection.scrollIntoView({ behavior: 'smooth' });
